@@ -21,4 +21,31 @@ class ProductController extends Controller
     function list(){
         return Product::all();
     }
+
+    function delete($id){
+        $result = Product:: where('id', $id)->delete();
+        if($result){
+            return ["result"=>"product has been deleted"];
+        }
+        else{
+            return ["result"=>"Already removed from database"];
+        }
+    }
+
+    function getSingleProduct($id){
+        return Product:: find($id);
+    }
+    function updateProduct($id, Request $req){
+        $product = Product::find($id);
+        $product->name=$req->input('name');
+        $product->price=$req->input('price');
+        $product->description=$req->input('description');
+        if($req->file('file')){
+            $product->file_path=$req->file('file')->store('products');
+        }
+        
+        $product->save();
+        return $product;
+
+    }
 }
