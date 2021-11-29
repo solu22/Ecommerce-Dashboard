@@ -18,7 +18,7 @@ const Register = () => {
     );
     const info = await result.data;
     localStorage.setItem("user-info", JSON.stringify(info));
-    navigate("/add");
+    navigate("/");
   };
   return (
       <>
@@ -30,6 +30,7 @@ const Register = () => {
         className="form-control"
         value={name}
         onChange={(e) => setName(e.target.value)}
+        placeholder = "name"
       />
       <br />
       <input
@@ -37,6 +38,7 @@ const Register = () => {
         className="form-control"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        placeholder="password"
       />
       <br />
       <input
@@ -44,6 +46,7 @@ const Register = () => {
         className="form-control"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        placeholder= "email"
       />
       <br />
       <button onClick={signUp} className="btn btn-primary">

@@ -13,12 +13,12 @@ const Header = () => {
   return (
     <div>
       <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href="#home">Turun Kauppa</Navbar.Brand>
-          <Nav className="me-auto nav_bar_wrapper">
+          <Navbar.Brand style={{marginLeft:'35px'}}>Turun Kauppa</Navbar.Brand>
+          <Nav className="me-auto nav_bar_wrapper" >
             {user ? (
               <>
-                <Link to="/add">Add Product</Link>
-                <Link to="/update">Update Product</Link>
+                <Link to="/" style = {{textDecoration:'none', color:'wheat'}}>Product List</Link>
+                <Link to="/add" style = {{textDecoration:'none', color:'wheat'}}>Add Product</Link>
                 <button style = {{color:'black', marginLeft:'5px'}}>Welcome {user.name}</button>
                 <button onClick = {logout} style = {{color:'black', marginLeft:'5px'}}>Logout</button>
               </>

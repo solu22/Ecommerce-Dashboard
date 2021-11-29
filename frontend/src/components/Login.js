@@ -7,15 +7,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  // useEffect(() => {
-  //     if(!localStorage.getItem('user-info'))
-  //     {
-  //         navigate("/register")
-  //     }
-  //     return
 
-  // // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [])
 
   const signIn = async () => {
     const loginData = { email, password };

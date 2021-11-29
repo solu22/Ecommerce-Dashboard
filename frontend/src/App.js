@@ -14,11 +14,12 @@ function App() {
     
       <Router >
         <Routes>
-          <Route path ="/" element = { <Home />} />
+          
           <Route path ="/login" element = { <Login />} />
           <Route path ="/register" element = { <Register />} />
           <Route path ="/add" element = { <AddProduct/>} />
-          <Route path ="/update" element = { <UpdateProduct />} />
+          <Route path ="/update/:id" element = { <UpdateProduct />} />
+          <Route path ="/" element = { <Home />} />
         </Routes>
       
       </Router>
