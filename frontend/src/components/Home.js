@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from './Header'
 
-const HomePage = () => {
+const Home = () => {
     return (
-        <div className = "container">
+        <div>
             <Header />
         </div>
     )
 }
 
-export default HomePage
+export default Home
